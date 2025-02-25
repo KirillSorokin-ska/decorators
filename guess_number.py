@@ -8,6 +8,8 @@ start_time = dt.now()
 
 
 @access_control
+# *args - попадают любые позиционные аргументы
+# **kwargs - попадают любые ключевые аргументы
 def get_statistics(total_games: int, *args, **kwargs) -> None:
     game_time = dt.now() - start_time
     print(f'Общее время игры: {game_time}, текущая игра - №{total_games}')
